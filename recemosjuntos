@@ -1,0 +1,402 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeros Pasos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenedor {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .misterio {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .misterio:nth-child(odd) {
+            background-color: #e6f3ff; /* Azul claro */
+        }
+
+        .misterio:nth-child(even) {
+            background-color: #eaf2e3; /* Verde claro */
+        }
+
+        .misterio h3 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .oracion {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .oracion li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Rosario</h1>
+        <h2 id="mensaje"></h2>
+        <img src="https://cdn.glitch.global/84b780f2-e6b2-444a-9970-b8183d23562d/imagen.png?v=1715110514338" alt="Imagen">
+        <div id="misterios"></div>
+    </div>
+    <script>
+        var fecha = new Date();
+        var dia = fecha.getDay();
+        var mensaje = '';
+        var misterios = '';
+
+        switch (dia) {
+            case 0: // Domingo
+                mensaje = 'Hoy, Domingo, meditamos los misterios gloriosos';
+                misterios = '<div class="misterio">' +
+                            '<h3>1.- Resurrección de nuestro Señor Jesucristo</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="misterio">' +
+                            '<h3>2.- La ascensión de nuestro Señor Jesucristo</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="misterio">' +
+                            '<h3>3.- La venida del Espíritu Santo</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="misterio">' +
+                            '<h3>4.- La asunción de María</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="misterio">' +
+                            '<h3>5.- La coronación de María</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>';
+                break;
+            case 1: // Lunes
+            case 6: // Sábado
+                mensaje = 'Hoy, ' + (dia == 1 ? 'Lunes' : 'Sábado') + ', meditamos los misterios gozosos';
+                misterios = '<div class="misterio">' +
+                            '<h3>1.- La anunciación del Ángel a María</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="misterio">' +
+                            '<h3>2.- La visitación de María a su prima Santa Isabel</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="misterio">' +
+                            '<h3>3.- El nacimiento del Niño Dios</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="misterio">' +
+                            '<h3>4.- La presentación del Niño Jesús en el templo</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="misterio">' +
+                            '<h3>5.- El Niño Jesús perdido y hallado en el templo</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>';
+                break;
+            case 2: // Martes
+            case 5: // Viernes
+                mensaje = 'Hoy, ' + (dia == 2 ? 'Martes' : 'Viernes') + ', meditamos los misterios dolorosos';
+                misterios = '<div class="misterio">' +
+                            '<h3>1.- La oración de Jesús en el huerto</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="misterio">' +
+                            '<h3>2.- La flagelación del Señor Jesús</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="misterio">' +
+                            '<h3>3.- La coronación de espinas</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="misterio">' +
+                            '<h3>4.- Jesús cargando con la cruz</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="misterio">' +
+                            '<h3>5.- La crucifixión y muerte de nuestro Señor Jesucristo</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>';
+                break;
+            case 3: // Miércoles
+            case 4: // Jueves
+                mensaje = 'Hoy, ' + (dia == 3 ? 'Miércoles' : 'Jueves') + ', meditamos los misterios gloriosos';
+                misterios = '<div class="misterio">' +
+                            '<h3>1.- Resurrección de nuestro Señor Jesucristo</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="misterio">' +
+                            '<h3>2.- La ascensión de nuestro Señor Jesucristo</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="misterio">' +
+                            '<h3>3.- La venida del Espíritu Santo</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="misterio">' +
+                            '<h3>4.- La asunción de María</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="misterio">' +
+                            '<h3>5.- La coronación de María</h3>' +
+                            '<ul class="oracion">' +
+                            '<li>Padre Nuestro</li>' +
+                            '<li>Dios te salve María, llena eres de gracia...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '<li>Santa María, Madre de Dios, ruega por nosotros...</li>' +
+                            '</ul>' +
+                            '</div>';
+                break;
+        }
+
+        document.getElementById('mensaje').innerText = mensaje;
+        document.getElementById('misterios').innerHTML = misterios;
+    </script>
+</body>
+</html>
