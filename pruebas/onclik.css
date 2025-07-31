@@ -1,0 +1,192 @@
+body{
+  font-family: sans-serif;
+  margin:0;
+  padding:0px;
+}
+
+.eventos{padding:10px;}
+
+h1{
+  text-align:center;
+  border:1px solid;
+}
+
+h2{
+  font-size:1.1em;
+  margin-top:2em;
+}
+
+h3{
+  background:red;
+  display:table;
+  line-height:3;
+  
+}
+
+main {
+  margin:auto;
+  width:80%;
+}
+
+.acordeon{
+  background:#eee;
+}
+
+.acordeon a{
+  color:steelblue;
+  background:#ddd;
+  display:block;
+  font-weight:bold;
+  line-height:2.5em;
+  text-decoration:none;
+  padding:0 1em;
+}
+
+.acordeon p{
+  padding:1em;
+  margin:0;
+  display:none;
+}
+
+.acordeon p:target {
+  color:red;
+  display:block;
+}
+
+
+
+.acorde:before{
+  display: block;
+  content: " otro mas --Dios te salve Maria llena eres de gracia el Señor es con tigo bendita eres entre todas las mujeres y vendito es el fruto de tu vientre Jesus, Santa Maria madre de Dios rRuega Señora por nosotros los pecadores ahora y en la hora de nuestra muerte amen.";
+   margin-top:20px;
+}
+
+
+
+
+/*Modal*/
+#modal{
+  background: rgba(0,0,0,0.8);
+  position:fixed;
+  top:-100vh;
+  left:0;
+  width:100%;
+  height: 100vh;
+  z-index:100;
+  transition:all .9s;
+}
+
+p{
+  color:#fff;
+  width:70%;
+  font-size:1.4em;
+  text-align:center;
+  position:absolute;
+  left:15%;
+  top:50%;
+  transform:translateY(-50%);
+  margin:0;
+}
+
+#abrir-modal{
+  display: none;
+} #abrir-modal + label{
+  display:table;
+  line-height:3;
+  padding:0 1em;
+  text-transform: uppercase;
+  background: steelblue;
+  margin:auto;
+  color:#fff;
+  cursor:pointer;  
+}
+
+#abrir-modal:checked ~ #modal{
+  top:0;
+  
+}
+
+#cerrar-modal{
+  display:none;
+} #cerrar-modal + label{
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  z-index: 150;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  background:tomato;
+  border-radius:50%;
+  width:35px;
+  height:35px;
+  text-align: center;
+  line-height:35px;
+  cursor: pointer;
+}
+
+#cerrar-modal:checked ~ #modal{
+  top:-100vh;
+}
+
+
+/* menu */
+
+#menu{
+
+}
+#menu ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  position:fixed;
+  top:0;
+  left:-50%;
+  background:  rgba(0,0,0,0.7);
+  width:50%;
+  height:100vh;
+  padding-top: 4em;
+  z-index: 100;
+      transition: all .5s;
+
+}
+
+#menu ul a{
+  color: #fff;
+  text-decoration:none;
+  display:block;
+  line-height: 2.5;
+  padding: 0 1em;
+  border-bottom: 1px solid rgb(255,255,255,0.2);
+  
+  
+}
+
+#mostrar-menu{
+  display:none;  
+} #mostrar-menu + label{
+     position:fixed;
+     top:0;
+     left:0;
+     line-height: 2;
+     background:#222;
+     color: #fff;
+     padding: 0 1em;
+     cursor: pointer;
+     z-index: 150;
+ }
+#mostrar-menu:checked ~ ul{
+  left:0;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
