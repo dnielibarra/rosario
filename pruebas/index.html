@@ -13,31 +13,34 @@
       background-color: #fdfdfd;
     }
 
-nav.menu {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  overflow-x: auto;
-  background-color: #d0e9e4;
-  padding: 10px 0;
-  white-space: nowrap;
-}
+    /* MENÚ RESPONSIVO */
+    nav.menu {
+      background-color: #d0e9e4;
+      padding: 10px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
 
-nav.menu a {
-  display: inline-block;
-  margin: 6px 10px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #00695c;
-  padding: 6px 12px;
-  border-radius: 8px;
-  background-color: #ffffff;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-}
+    nav.menu a {
+      display: inline-block;
+      margin: 6px 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #00695c;
+      padding: 6px 12px;
+      border-radius: 8px;
+      background-color: #ffffff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      transition: background-color 0.2s;
+    }
 
-nav.menu a:hover {
-  background-color: #b2dfdb;
-}
+    nav.menu a:hover {
+      background-color: #b2dfdb;
+    }
 
     section {
       padding: 20px;
@@ -52,6 +55,7 @@ nav.menu a:hover {
       padding: 0;
     }
 
+    /* BOTONES DE ORACIONES CON ANIMACIÓN */
     li button {
       background-color: #ffffff;
       border: 1px solid #ccc;
@@ -62,13 +66,23 @@ nav.menu a:hover {
       margin-bottom: 8px;
       cursor: pointer;
       border-radius: 6px;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: aparecer 0.4s ease forwards;
     }
 
-    li button:hover {
-      background-color: #e0f2f1;
+    li button:nth-child(1) { animation-delay: 0.1s; }
+    li button:nth-child(2) { animation-delay: 0.2s; }
+    li button:nth-child(3) { animation-delay: 0.3s; }
+
+    @keyframes aparecer {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    /* Modal básico */
+    /* MODAL CON ANIMACIÓN */
     .modal {
       display: none;
       position: fixed;
@@ -89,6 +103,18 @@ nav.menu a:hover {
       width: 90%;
       max-width: 500px;
       position: relative;
+      animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
     .close {
@@ -104,10 +130,14 @@ nav.menu a:hover {
       white-space: pre-wrap;
       text-align: justify;
       margin-top: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
+
+  <!-- MENÚ -->
   <nav class="menu">
     <a href="#libro1">Libro 1</a>
     <a href="#">Libro 2</a>
@@ -121,6 +151,7 @@ nav.menu a:hover {
     <a href="#">Libro 10</a>
   </nav>
 
+  <!-- LIBRO 1 -->
   <section id="libro1">
     <h2>Libro 1: Oraciones Básicas</h2>
     <ul>
@@ -130,7 +161,7 @@ nav.menu a:hover {
     </ul>
   </section>
 
-  <!-- Modales -->
+  <!-- MODAL -->
   <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="cerrarModal()">&times;</span>
@@ -176,4 +207,3 @@ nav.menu a:hover {
   </script>
 </body>
 </html>
-
