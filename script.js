@@ -14,7 +14,7 @@ const misterios = {
   Gozosos: [
     "La Anunciación del Ángel a María",
     "La Visitación de María a su prima Isabel",
-    "El Nacimiento de Jesús",
+    "El Nacimiento del niño Dios",
     "La Presentación de Jesús en el templo",
     "El Niño perdido y hallado en el templo"
   ],
@@ -23,18 +23,18 @@ const misterios = {
     "La flagelación de nuestro Señor Jesucristo",
     "La coronación de espinas",
     "Jesús con la cruz a cuestas",
-    "La crucifixión y muerte de nuestro Señor"
+    "La crucifixión y muerte de nuestro Señor Jeuscristo"
   ],
   Gloriosos: [
     "La Resurrección del Señor",
     "La Ascensión del Señor al cielo",
     "La venida del Espíritu Santo",
     "La Asunción de la Virgen María",
-    "La Coronación de María como Reina"
+    "La Coronación de María como Reina del cielo"
   ],
   Luminosos: [
     "El Bautismo de Jesús en el Jordán",
-    "La autorrevelación en las bodas de Caná",
+    "Las bodas de Caná",
     "El anuncio del Reino de Dios",
     "La Transfiguración",
     "La Institución de la Eucaristía"
@@ -69,15 +69,14 @@ document.getElementById('introduccion').innerHTML = `
   <div class="post">
     <div class="perfil">
       <img src="images/guadalupe.png" alt="Virgen de Guadalupe">
-      <span class="misterio">Introducción</span>
+      <span class="misterio">Comenzamos con el Santo Rosario:</span>
     </div>
     <div class="contenido">
       <p class="oracion">
-        Comenzamos con el Santo Rosario:<br>
-        En el nombre del Padre, del Hijo y del Espíritu Santo. Amén.<br><br>
-        Dios mío, me arrepiento de todo corazón de haberte ofendido.<br>
-        Dame tu santa gracia para no ofenderte más. Amén.<br><br>
-        Padre Nuestro...<br><br>
+        En el nombre del Padre, del Hijo y del Espíritu Santo. Amén.<br>
+        Dios mío, me arrepiento de todo corazón de haberte ofendido.
+        Dame tu santa gracia para no ofenderte más. Amén.<br>
+        Padre Nuestro...<br>
         Ave María.
       </p>
     </div>
