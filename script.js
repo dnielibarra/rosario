@@ -126,12 +126,35 @@ document.getElementById('oraciones-finales').innerHTML = `
     </div>
     <div class="contenido">
       <p class="oracion">
-        Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra; Dios te salve.<br>
-        A Ti llamamos los desterrados hijos de Eva; a Ti suspiramos, gimiendo y llorando en este valle de lágrimas.<br>
-        Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos;<br>
-        y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre.<br>
-        ¡Oh clemente! ¡Oh piadosa! ¡Oh dulce Virgen María!<br><br>
-        Ruega por nosotros, Santa Madre de Dios, para que seamos dignos de alcanzar las promesas de nuestro Señor Jesucristo. Amén.
+Dios te salve María Santísima, Hija de
+Dios Padre, Virgen purísima, en tus
+manos encomendamos nuestra fe para
+que la ilumines, llena eres de gracia el Señor es con tigo bendita eres entre todas las mujeres y bendito es el fruto de tu vientre Jesus<br>
+Dios te salve María Sanísima, Madre de
+Dios Hijo, Virgen purísima, en tus manos
+encomendamos nuestra esperanza para
+que la alientes, llena eres de gracia el Señor es con tigo bendita eres entre todas las mujeres y bendito es el fruto de tu vientre Jesus<br>
+Dios te salve María Sanísima, Esposa de
+Dios Espíritu Santo, Virgen purísima, en
+tus manos encomendamos nuestra caridad
+para que la inflames, llena eres de gracia el Señor es con tigo bendita eres entre todas las mujeres y bendito es el fruto de tu vientre Jesus<br>
+Dios te salve María Sanísima, Virgen
+purísima, Templo y Sagrario de la
+Sanasima Trinidad, Virgen concebida sin
+pecado original.<br>
+Dios te salve, Reina y Madre de misericordia,
+vida, dulzura y esperanza nuestra. Dios te
+salve. A tí clamamos los desterrados hijos de
+Eva, a tí suspiramos, gimiendo y llorando en
+este valle de lágrimas. Ea, pues, Señora
+Abogada Nuestra, vuelve a nosotros esos tus
+ojos misericordiosos, y después de este
+destíerro, muéstranos a Jesús, fruto bendito de
+tu vientre. Oh, clemente, oh piadosa, oh dulce
+Virgen María. Ruega por nosotros, Santa
+Madre de Dios, para que seamos dignos de
+alcanzar las divinas gracias y promesas de
+Nuestro Señor Jesucristo. Amén.
       </p>
     </div>
   </div>
@@ -146,6 +169,7 @@ document.getElementById('letanias').innerHTML = `
     </div>
     <div class="contenido">
       <p class="oracion">
+      
         Señor, ten piedad de nosotros.<br>
         Cristo, ten piedad de nosotros.<br>
         Señor, ten piedad de nosotros.<br><br>
