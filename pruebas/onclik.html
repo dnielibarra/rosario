@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="onclik.css">
+    <style type="text/css">
+      body{font-family: arial; font-size:16px; margin:0; padding:0px;}
+      .contenedor{padding:15px;}
+      p{padding-left:5px; padding-right:5px;}
+      .PadreNuestro:before{content:"Padre nuestro"; font-weight:bold;}
+      .PadreNuestro:after{content:", que estás en el cielo, santificado sea tu nombre, venga a nosotros tu reino, hágase tu voluntad, en la tierra como en el cielo. Danos hoy nuestro pan de cada día, perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden. No nos dejes caer en la tentación, y líbranos del mal. Amén";}
+      .aveMaria:before{content: "Dios te salve Maria llena eres de gracia el Señor es con tigo bendita eres entre todas las mujeres y bendito es el fruto de tu vientre Jesus, "; font-weight:bold;}
+      .aveMaria:after{content: white-space: pre; "Santa Maria madre de Dios ruega Señora por nosotros los pecadores ahora y en la hora de nuestra muerte amen.";}
+      .diezVeces:before{content: "(10 veces)";}
+      .Gloria:before{content: "Gloria "; font-weight:bold;}
+      .Gloria:after{content:"al Padre y al Hijo y al Espíritu Santo. Como era en el principio ahora y siempre, por los siglos de los siglos. Amén"; tex}
+    </style>
+   <title>EL SANTO ROSARIO</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <h1> Clik CSS</h1>
+      <p class="PadreNuestro"></p>
+      <p><span class="aveMaria"></span><br>(10 veces)</p>
+      <p class="Gloria"></p>
+      <p class="acorde"></p>
+      <br>
+      </div>
+    
+    
+    <div class="contenedor">
+      <h1>Evento click css</h1>
+        <p>acordeon con :targuet</p>
+    <div class="acordeon">
+      <a href="#seccion-1">Titulo 1</a>
+        <p id="seccion-1">
+          La casa del loco
+        </p>
+      
+      <a href="#seccion-2">Titulo 2</a>
+        <p id="seccion-2">
+          La casa del loco
+        </p>
+      
+      
+      
+    </div>
+    </div>
+    <br><br><br><br>
+    
+    
+    <div class="contenedor">
+      <h1> ventana modal y radio button</h1>
+      <input type="radio" name="modal1" id="abrir-modal">
+      <label for="abrir-modal">mostrar modal</label>
+      <input type="radio" name="modal1" id="cerrar-modal">
+      <label for="cerrar-modal">X</label>
+      <div id="modal">
+        <p class="PadreNuestro"></p>
+      </div>
+      
+    </div>
+    
+    
+    
+  </body>
+  </html>
+
+
+<script type="text/javascript">
+var fecha = new Date(); 
+
+var semana0 = "Hoy es domingo, se rezan misterios Gloriosos."; 
+var semana1 = "Hoy es lunes, se rezan misterios Gozosos"; 
+var semana2 = "Hoy es martes, se rezan misterios Dolorosos "; 
+var semana3 = "Hoy es miércoles, se rezan misterios Gloriosos"; 
+var semana4 = "Hoy es jueves, se rezan misterios Luminosos"; 
+var semana5 = "Hoy es viernes, se rezan misterios Dolorosos."; 
+var semana6 = "Hoy es sábado, se rezan misterios Gozosos"; 
+
+var hoy = fecha.getDay(); 
+
+alert( eval("semana" + hoy) );
+</script>
