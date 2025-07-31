@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oraciones del Catecismo</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+    }
+
+    nav.menu {
+      background-color: #d0e9e4;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav.menu a {
+      margin: 0 8px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #00695c;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #004d40;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li button {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 100%;
+      text-align: left;
+      font-size: 16px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    li button:hover {
+      background-color: #e0f2f1;
+    }
+
+    /* Modal básico */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .oracion-texto {
+      white-space: pre-wrap;
+      text-align: justify;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="menu">
+    <a href="#libro1">Libro 1</a>
+    <a href="#">Libro 2</a>
+    <a href="#">Libro 3</a>
+    <a href="#">Libro 4</a>
+    <a href="#">Libro 5</a>
+    <a href="#">Libro 6</a>
+    <a href="#">Libro 7</a>
+    <a href="#">Libro 8</a>
+    <a href="#">Libro 9</a>
+    <a href="#">Libro 10</a>
+  </nav>
+
+  <section id="libro1">
+    <h2>Libro 1: Oraciones Básicas</h2>
+    <ul>
+      <li><button onclick="abrirModal('cruz')">Señal de la Cruz</button></li>
+      <li><button onclick="abrirModal('padrenuestro')">Padre Nuestro</button></li>
+      <li><button onclick="abrirModal('angel')">Ángel de la Guarda</button></li>
+    </ul>
+  </section>
+
+  <!-- Modales -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <h3 id="modal-titulo"></h3>
+      <div class="oracion-texto" id="modal-texto"></div>
+    </div>
+  </div>
+
+  <script>
+    const oraciones = {
+      cruz: {
+        titulo: "Señal de la Cruz",
+        texto: "Por la señal de la Santa Cruz,\nde nuestros enemigos líbranos Señor Dios nuestro.\nEn el nombre del Padre, del Hijo y del Espíritu Santo. Amén."
+      },
+      padrenuestro: {
+        titulo: "Padre Nuestro",
+        texto: "Padre nuestro que estás en el cielo,\nsantificado sea tu Nombre;\nvenga a nosotros tu reino;\nhágase tu voluntad en la tierra como en el cielo.\nDanos hoy nuestro pan de cada día;\nperdona nuestras ofensas,\ncomo también nosotros perdonamos a los que nos ofenden;\nno nos dejes caer en la tentación\ny líbranos del mal. Amén."
+      },
+      angel: {
+        titulo: "Ángel de la Guarda",
+        texto: "Ángel de mi guarda,\ndulce compañía,\nno me desampares\nni de noche ni de día.\nNo me dejes solo,\nque me perdería.\nHasta que descanse\nen los brazos de Jesús, José y María. Amén."
+      }
+    };
+
+    function abrirModal(clave) {
+      const modal = document.getElementById("modal");
+      const data = oraciones[clave];
+      document.getElementById("modal-titulo").textContent = data.titulo;
+      document.getElementById("modal-texto").textContent = data.texto;
+      modal.style.display = "block";
+    }
+
+    function cerrarModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      const modal = document.getElementById("modal");
+      if (event.target === modal) {
+        cerrarModal();
+      }
+    };
+  </script>
+</body>
+</html>
 
