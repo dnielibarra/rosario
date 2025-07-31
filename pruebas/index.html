@@ -3,40 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Libro 1 - Swipe para marcar</title>
+  <title>Oraciones del Catecismo</title>
   <style>
     body {
       font-family: sans-serif;
-      background: #f0fefc;
       margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+    }
+
+    nav.menu {
+      background-color: #d0e9e4;
+      padding: 10px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    nav.menu a {
+      display: inline-block;
+      margin: 6px 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #00695c;
+      padding: 6px 12px;
+      border-radius: 8px;
+      background-color: #ffffff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      transition: background-color 0.2s;
+    }
+
+    nav.menu a:hover {
+      background-color: #b2dfdb;
+    }
+
+    section {
       padding: 20px;
     }
 
     h2 {
       color: #004d40;
-      margin-bottom: 10px;
     }
 
-    .oracion-lista {
+    ul {
       list-style: none;
       padding: 0;
     }
 
-    .oracion {
-      background: #ffffff;
+    li .oracion-btn {
+      background-color: #ffffff;
       border: 1px solid #ccc;
-      padding: 12px 16px;
+      padding: 10px;
+      width: 100%;
+      text-align: left;
       font-size: 16px;
       margin-bottom: 12px;
+      cursor: pointer;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(10px);
+      animation: aparecer 0.4s ease forwards;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, opacity 0.3s ease;
       touch-action: pan-y;
     }
 
-    .oracion.oculto {
-      opacity: 0;
-      transform: translateX(100%);
+    li .oracion-btn:nth-child(1) { animation-delay: 0.1s; }
+    li .oracion-btn:nth-child(2) { animation-delay: 0.2s; }
+    li .oracion-btn:nth-child(3) { animation-delay: 0.3s; }
+
+    .oculto {
+      opacity: 0 !important;
+      transform: translateX(100%) !important;
       pointer-events: none;
       height: 0;
       margin: 0;
@@ -44,31 +85,148 @@
       overflow: hidden;
       border: none;
     }
+
+    @keyframes aparecer {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+      animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .oracion-texto {
+      white-space: pre-wrap;
+      text-align: justify;
+      margin-top: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
 
-  <h2>Libro 1: Desliza para marcar</h2>
-  <ul class="oracion-lista">
-    <li class="oracion" ontouchstart="startSwipe(event)" ontouchmove="moveSwipe(event)" ontouchend="endSwipe(event)" onmousedown="startSwipe(event)" onmousemove="moveSwipe(event)" onmouseup="endSwipe(event)">
-      ✝️ Señal de la Cruz
-    </li>
-    <li class="oracion" ontouchstart="startSwipe(event)" ontouchmove="moveSwipe(event)" ontouchend="endSwipe(event)" onmousedown="startSwipe(event)" onmousemove="moveSwipe(event)" onmouseup="endSwipe(event)">
-      🙏 Padre Nuestro
-    </li>
-    <li class="oracion" ontouchstart="startSwipe(event)" ontouchmove="moveSwipe(event)" ontouchend="endSwipe(event)" onmousedown="startSwipe(event)" onmousemove="moveSwipe(event)" onmouseup="endSwipe(event)">
-      😇 Ángel de la Guarda
-    </li>
-  </ul>
+  <nav class="menu">
+    <a href="#libro1">Libro 1</a>
+    <a href="#">Libro 2</a>
+    <a href="#">Libro 3</a>
+    <a href="#">Libro 4</a>
+    <a href="#">Libro 5</a>
+    <a href="#">Libro 6</a>
+    <a href="#">Libro 7</a>
+    <a href="#">Libro 8</a>
+    <a href="#">Libro 9</a>
+    <a href="#">Libro 10</a>
+  </nav>
+
+  <section id="libro1">
+    <h2>Libro 1: Oraciones Básicas</h2>
+    <ul>
+      <li><div class="oracion-btn" data-key="cruz"
+        ontouchstart="startSwipe(event)" ontouchmove="moveSwipe(event)" ontouchend="endSwipe(event)"
+        onmousedown="startSwipe(event)" onmousemove="moveSwipe(event)" onmouseup="endSwipe(event)">
+        ✝️ Señal de la Cruz
+      </div></li>
+      <li><div class="oracion-btn" data-key="padrenuestro"
+        ontouchstart="startSwipe(event)" ontouchmove="moveSwipe(event)" ontouchend="endSwipe(event)"
+        onmousedown="startSwipe(event)" onmousemove="moveSwipe(event)" onmouseup="endSwipe(event)">
+        🙏 Padre Nuestro
+      </div></li>
+      <li><div class="oracion-btn" data-key="angel"
+        ontouchstart="startSwipe(event)" ontouchmove="moveSwipe(event)" ontouchend="endSwipe(event)"
+        onmousedown="startSwipe(event)" onmousemove="moveSwipe(event)" onmouseup="endSwipe(event)">
+        😇 Ángel de la Guarda
+      </div></li>
+    </ul>
+  </section>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <h3 id="modal-titulo"></h3>
+      <div class="oracion-texto" id="modal-texto"></div>
+    </div>
+  </div>
 
   <script>
+    const oraciones = {
+      cruz: {
+        titulo: "Señal de la Cruz",
+        texto: "Por la señal de la Santa Cruz,\nde nuestros enemigos líbranos Señor Dios nuestro.\nEn el nombre del Padre, del Hijo y del Espíritu Santo. Amén."
+      },
+      padrenuestro: {
+        titulo: "Padre Nuestro",
+        texto: "Padre nuestro que estás en el cielo,\nsantificado sea tu Nombre;\nvenga a nosotros tu reino;\nhágase tu voluntad en la tierra como en el cielo.\nDanos hoy nuestro pan de cada día;\nperdona nuestras ofensas,\ncomo también nosotros perdonamos a los que nos ofenden;\nno nos dejes caer en la tentación\ny líbranos del mal. Amén."
+      },
+      angel: {
+        titulo: "Ángel de la Guarda",
+        texto: "Ángel de mi guarda,\ndulce compañía,\nno me desampares\nni de noche ni de día.\nNo me dejes solo,\nque me perdería.\nHasta que descanse\nen los brazos de Jesús, José y María. Amén."
+      }
+    };
+
+    function abrirModal(clave) {
+      const modal = document.getElementById("modal");
+      const data = oraciones[clave];
+      document.getElementById("modal-titulo").textContent = data.titulo;
+      document.getElementById("modal-texto").textContent = data.texto;
+      modal.style.display = "block";
+    }
+
+    function cerrarModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    // Swipe para ocultar
     let startX = 0;
     let isSwiping = false;
     let currentItem = null;
 
     function startSwipe(e) {
       isSwiping = true;
-      currentItem = e.target.closest('.oracion');
+      currentItem = e.target.closest('.oracion-btn');
       startX = e.touches ? e.touches[0].clientX : e.clientX;
     }
 
@@ -85,17 +243,23 @@
       let diffX = endX - startX;
 
       if (Math.abs(diffX) > 100) {
-        // Si deslizó suficiente, ocultar
         currentItem.classList.add('oculto');
       } else {
-        // Si no, volver a posición original
         currentItem.style.transform = 'translateX(0)';
+        // Abrir modal si fue solo toque/clic
+        if (Math.abs(diffX) < 10) {
+          abrirModal(currentItem.getAttribute('data-key'));
+        }
       }
 
       isSwiping = false;
       currentItem = null;
     }
-  </script>
 
+    window.onclick = function (event) {
+      const modal = document.getElementById("modal");
+      if (event.target === modal) cerrarModal();
+    };
+  </script>
 </body>
 </html>
