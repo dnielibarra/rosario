@@ -69,7 +69,7 @@ document.getElementById('introduccion').innerHTML = `
   <div class="post">
     <div class="perfil">
       <img src="images/guadalupe.png" alt="Virgen de Guadalupe">
-      <span class="misterio">Comenzamos con el Santo Rosario:</span>
+      <span class="misterio">Comenzamos<br>con el Santo Rosario:</span>
     </div>
     <div class="contenido">
       <p class="oracion">
