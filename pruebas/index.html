@@ -13,21 +13,28 @@
       background-color: #fdfdfd;
     }
 
-    nav.menu {
-      background-color: #d0e9e4;
-      padding: 10px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+nav.menu {
+  background-color: #d0e9e4;
+  padding: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
 
-    nav.menu a {
-      margin: 0 8px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #00695c;
-    }
+nav.menu a {
+  display: inline-block;
+  margin: 6px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #00695c;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+nav.menu a:hover {
+  background-color: #b2dfdb;
+}
 
     section {
       padding: 20px;
