@@ -110,8 +110,8 @@ document.getElementById('intencion-papa').innerHTML = `
     </div>
     <div class="contenido">
       <p class="oracion">
-        Recemos un Padre Nuestro por las intenciones del Santo Padre el Papa León XIV:<br><br>
-        Padre Nuestro...
+Recemos un Padre Nuestro por las intenciones del Santo Padre el Papa León XIV:<br><br>
+Padre Nuestro...
       </p>
     </div>
   </div>
@@ -170,24 +170,33 @@ document.getElementById('letanias').innerHTML = `
     <div class="contenido">
       <p class="oracion">
       
-Señor, ten piedad de nosotros.<br>
-Cristo, ten piedad de nosotros.<br>
-Señor, ten piedad de nosotros.<br><br>
-Cristo, óyenos. Cristo, escúchanos.<br><br>
-Dios Padre celestial, ten piedad de nosotros.<br>
-Dios Hijo, Redentor del mundo, ten piedad de nosotros.<br>
-Dios Espíritu Santo, ten piedad de nosotros.<br>
-      Trinidad Santa, un solo Dios, ten piedad de nosotros.<br><br>
-      Santa María, ruega por nosotros.<br>
-      Santa Madre de Dios, ruega por nosotros.<br>
-      Santa Virgen de las vírgenes, ruega por nosotros.<br>
-      ...<br>
-      Reina del Santo Rosario, ruega por nosotros.<br><br>
-      Cordero de Dios que quitas el pecado del mundo, perdónanos Señor.<br>
-      Cordero de Dios que quitas el pecado del mundo, escúchanos Señor.<br>
-      Cordero de Dios que quitas el pecado del mundo, ten piedad de nosotros.<br><br>
-      Ruega por nosotros, Santa Madre de Dios,<br>
-      Para que seamos dignos de alcanzar las promesas de Cristo. Amén.
+Señor, ten piedad de nosotros.
+       Todos: Señor ten piedad de nosotros<br>
+Cristo, ten piedad de nosotros.
+       Todos: Cristo ten piedad de nosotros<br>
+Señor, ten piedad de nosotros.
+       Todos: Señor ten piedad de nosotros<br>
+Jesucristo, óyenos.
+       Todos: Jesucristo, óyenos.
+Jesucristo, escúchanos.
+       Todos: Jesucristo, escuchanos
+Dios Padre celestial, 
+       Todos: ten piedad de nosotros.<br>
+Dios Hijo, Redentor del mundo, 
+       Todos: ten piedad de nosotros.<br>
+Dios Espíritu Santo, 
+       Todos: ten piedad de nosotros.<br>
+Trinidad Santa, un solo Dios, ten piedad de nosotros.<br><br>
+Santa María, ruega por nosotros.<br>
+Santa Madre de Dios, ruega por nosotros.<br>
+Santa Virgen de las vírgenes, ruega por nosotros.<br>
+...<br>
+Reina del Santo Rosario, ruega por nosotros.<br><br>
+Cordero de Dios que quitas el pecado del mundo, perdónanos Señor.<br>
+Cordero de Dios que quitas el pecado del mundo, escúchanos Señor.<br>
+Cordero de Dios que quitas el pecado del mundo, ten piedad de nosotros.<br><br>
+Ruega por nosotros, Santa Madre de Dios,<br>
+Para que seamos dignos de alcanzar las promesas de Cristo. Amén.
       </p>
     </div>
   </div>
