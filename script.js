@@ -57,18 +57,35 @@ en la vida y en la muerte ampáranos gran Señora.
 Sagrado Corazón de Jesús, en vos confío.
 `;
 
-// Obtener el día actual
+// Día actual
 const hoy = new Date().getDay();
 const tipo = misteriosPorDia[hoy];
 const lista = misterios[tipo];
 
-// Mostrar el título del día
 document.getElementById('titulo-dia').textContent = `Hoy se rezan los Misterios ${tipo}`;
 
-// Contenedor de los posts
-const contenedor = document.getElementById('contenedor-posts');
+// === INTRODUCCIÓN ===
+document.getElementById('introduccion').innerHTML = `
+  <div class="post">
+    <div class="perfil">
+      <img src="images/guadalupe.png" alt="Virgen de Guadalupe">
+      <span class="misterio">Introducción</span>
+    </div>
+    <div class="contenido">
+      <p class="oracion">
+        Comenzamos con el Santo Rosario:<br>
+        En el nombre del Padre, del Hijo y del Espíritu Santo. Amén.<br><br>
+        Dios mío, me arrepiento de todo corazón de haberte ofendido.<br>
+        Dame tu santa gracia para no ofenderte más. Amén.<br><br>
+        Padre Nuestro...<br><br>
+        Ave María.
+      </p>
+    </div>
+  </div>
+`;
 
-// Generar los posts
+// === MISTERIOS ===
+const contenedor = document.getElementById('contenedor-posts');
 lista.forEach((titulo, index) => {
   const post = document.createElement('div');
   post.className = 'post';
@@ -85,7 +102,75 @@ lista.forEach((titulo, index) => {
   contenedor.appendChild(post);
 });
 
-// Convertir número a ordinal
+// === ORACIÓN POR EL PAPA ===
+document.getElementById('intencion-papa').innerHTML = `
+  <div class="post">
+    <div class="perfil">
+      <img src="images/guadalupe.png" alt="Virgen de Guadalupe">
+      <span class="misterio">Oración por el Santo Padre</span>
+    </div>
+    <div class="contenido">
+      <p class="oracion">
+        Recemos un Padre Nuestro por las intenciones del Santo Padre el Papa León XIV:<br><br>
+        Padre Nuestro...
+      </p>
+    </div>
+  </div>
+`;
+
+// === ORACIONES FINALES ===
+document.getElementById('oraciones-finales').innerHTML = `
+  <div class="post">
+    <div class="perfil">
+      <img src="images/guadalupe.png" alt="Virgen de Guadalupe">
+      <span class="misterio">Oraciones Finales</span>
+    </div>
+    <div class="contenido">
+      <p class="oracion">
+        Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra; Dios te salve.<br>
+        A Ti llamamos los desterrados hijos de Eva; a Ti suspiramos, gimiendo y llorando en este valle de lágrimas.<br>
+        Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos;<br>
+        y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre.<br>
+        ¡Oh clemente! ¡Oh piadosa! ¡Oh dulce Virgen María!<br><br>
+        Ruega por nosotros, Santa Madre de Dios, para que seamos dignos de alcanzar las promesas de nuestro Señor Jesucristo. Amén.
+      </p>
+    </div>
+  </div>
+`;
+
+// === LETANÍAS ===
+document.getElementById('letanias').innerHTML = `
+  <div class="post">
+    <div class="perfil">
+      <img src="images/guadalupe.png" alt="Virgen de Guadalupe">
+      <span class="misterio">Letanías Lauretanas</span>
+    </div>
+    <div class="contenido">
+      <p class="oracion">
+        Señor, ten piedad de nosotros.<br>
+        Cristo, ten piedad de nosotros.<br>
+        Señor, ten piedad de nosotros.<br><br>
+        Cristo, óyenos. Cristo, escúchanos.<br><br>
+        Dios Padre celestial, ten piedad de nosotros.<br>
+        Dios Hijo, Redentor del mundo, ten piedad de nosotros.<br>
+        Dios Espíritu Santo, ten piedad de nosotros.<br>
+        Trinidad Santa, un solo Dios, ten piedad de nosotros.<br><br>
+        Santa María, ruega por nosotros.<br>
+        Santa Madre de Dios, ruega por nosotros.<br>
+        Santa Virgen de las vírgenes, ruega por nosotros.<br>
+        ...<br>
+        Reina del Santo Rosario, ruega por nosotros.<br><br>
+        Cordero de Dios que quitas el pecado del mundo, perdónanos Señor.<br>
+        Cordero de Dios que quitas el pecado del mundo, escúchanos Señor.<br>
+        Cordero de Dios que quitas el pecado del mundo, ten piedad de nosotros.<br><br>
+        Ruega por nosotros, Santa Madre de Dios,<br>
+        Para que seamos dignos de alcanzar las promesas de Cristo. Amén.
+      </p>
+    </div>
+  </div>
+`;
+
+// Utilidad: ordinal
 function ordinal(n) {
   const nombres = ["Primer", "Segundo", "Tercer", "Cuarto", "Quinto"];
   return nombres[n - 1] || `${n}°`;
