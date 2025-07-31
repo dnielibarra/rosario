@@ -73,11 +73,11 @@ document.getElementById('introduccion').innerHTML = `
     </div>
     <div class="contenido">
       <p class="oracion">
-      En el nombre del Padre, del Hijo y del Espíritu Santo. Amén.<br>
-      Dios mío, me arrepiento de todo corazón de haberte ofendido.
-      Dame tu santa gracia para no ofenderte más. Amén.<br>
-      Padre Nuestro...<br>
-      Ave María.
+En el nombre del Padre, del Hijo y del Espíritu Santo. Amén.<br>
+Dios mío, me arrepiento de todo corazón de haberte ofendido.
+Dame tu santa gracia para no ofenderte más. Amén.<br>
+Padre Nuestro...<br>
+Ave María.
       </p>
     </div>
   </div>
@@ -170,13 +170,13 @@ document.getElementById('letanias').innerHTML = `
     <div class="contenido">
       <p class="oracion">
       
-      Señor, ten piedad de nosotros.<br>
-      Cristo, ten piedad de nosotros.<br>
-      Señor, ten piedad de nosotros.<br><br>
-      Cristo, óyenos. Cristo, escúchanos.<br><br>
-      Dios Padre celestial, ten piedad de nosotros.<br>
-      Dios Hijo, Redentor del mundo, ten piedad de nosotros.<br>
-      Dios Espíritu Santo, ten piedad de nosotros.<br>
+Señor, ten piedad de nosotros.<br>
+Cristo, ten piedad de nosotros.<br>
+Señor, ten piedad de nosotros.<br><br>
+Cristo, óyenos. Cristo, escúchanos.<br><br>
+Dios Padre celestial, ten piedad de nosotros.<br>
+Dios Hijo, Redentor del mundo, ten piedad de nosotros.<br>
+Dios Espíritu Santo, ten piedad de nosotros.<br>
       Trinidad Santa, un solo Dios, ten piedad de nosotros.<br><br>
       Santa María, ruega por nosotros.<br>
       Santa Madre de Dios, ruega por nosotros.<br>
