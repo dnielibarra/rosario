@@ -74,7 +74,7 @@ document.getElementById('introduccion').innerHTML = `
     <div class="contenido">
       <p class="oracion">
 En el nombre del Padre, del Hijo y del Espíritu Santo. Amén.<br>
-Dios mío, me arrepiento de todo corazón de haberte ofendido.
+Dios mío, me arrepiento de todo corazón de haberte ofendido, por que eres infinitamente bueno.
 Dame tu santa gracia para no ofenderte más. Amén.<br>
 Padre Nuestro...<br>
 Ave María.
