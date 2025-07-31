@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Oraciones del Catecismo</title>
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fdfdfd;
-    }
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+  overflow-x: hidden; /* 👈 evita que se agrande la página al hacer swipe */
+}
 
     nav.menu {
       background-color: #d0e9e4;
@@ -75,16 +76,16 @@
     li .oracion-btn:nth-child(2) { animation-delay: 0.2s; }
     li .oracion-btn:nth-child(3) { animation-delay: 0.3s; }
 
-    .oculto {
-      opacity: 0 !important;
-      transform: translateX(100%) !important;
-      pointer-events: none;
-      height: 0;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      border: none;
-    }
+.oculto {
+  opacity: 0 !important;
+  transform: scale(0.9) !important;
+  transition: opacity 0.3s, transform 0.3s;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+}
 
     @keyframes aparecer {
       to {
