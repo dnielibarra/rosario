@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de Oraciones en Tiempo Real</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column; /* Para alinear verticalmente */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        #prayer-display {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            font-size: 1.5em; /* Letra más grande */
+            line-height: 1.8; /* Espacio entre líneas */
+            margin-bottom: 20px;
+        }
+        #controls {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        
+        /* Estilos para cada palabra */
+        .word {
+            color: #aaa; /* Color gris por defecto */
+            transition: color 0.3s;
+        }
+        .correct {
+            color: #2e7d32; /* Verde oscuro para correcto */
+            font-weight: bold;
+        }
+        .incorrect {
+            color: #c62828; /* Rojo oscuro para incorrecto */
+            text-decoration: line-through; /* Tachado */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="prayer-display">
+        </div>
+    <div id="controls">
+        <button id="start-btn">🎙️ Empezar a Rezar</button>
+        <p id="status">Presiona el botón para comenzar.</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
